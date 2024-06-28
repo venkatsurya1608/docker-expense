@@ -1,4 +1,5 @@
 #!/bin/bash
+# curl https://raw.githubusercontent.com/venkatsurya1608/docker-expense/main/install-docker.sh | bash
 
 R="\e[31m"
 N="\e[0m"
