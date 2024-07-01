@@ -7,18 +7,21 @@ volumes:
   mysql:    
 services:
   mysql:
-    image: mysql:1.6
+    image: venkatsurya1608/mysql:1.6
+    #image: mysql:1.6
     container_name: mysql
     volumes:
       - mysql:/var/lib/mysql  # -v volumes_name:path/in/container   data store chese path 
   backend:
-    image: backend:1.6
+    image: venkatsurya1608/backend:1.6
+    #image: backend:1.6
     container_name: backend
     depends_on:
       - mysql
     command: sh -c "sleep 20 && node /opt/server/index.js"   # backend mysql connect kavali ante kocham late avthundi anduke wait time pettamu 
   frontend:
-    image: frontend:1.6
+    #image: frontend:1.6
+    image: venkatsurya1608/frontend:1.6
     container_name: frontend
     depends_on:
      - backend
