@@ -20,8 +20,8 @@ services:
       - mysql
     command: sh -c "sleep 20 && node /opt/server/index.js"   # backend mysql connect kavali ante kocham late avthundi anduke wait time pettamu 
   frontend:
-    #image: frontend:1.6
     image: venkatsurya1608/frontend:1.6
+    #image: frontend:1.6
     container_name: frontend
     depends_on:
      - backend
